@@ -29,8 +29,6 @@ async function createTransaction(provider, method, params) {
 }
 
 async function createUser(firstName, lastName) {
-    firstName = ''
-    lastName = ''
     const provider = new ethers.providers.JsonRpcProvider(API_URL)
     const wallet = new ethers.Wallet(PRIVATE_KEY, provider)
     const transaction = await createTransaction(provider, "insertUser", [firstName, lastName]);

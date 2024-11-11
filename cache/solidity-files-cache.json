@@ -195,6 +195,80 @@
         "Context"
       ]
     },
+    "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1729081828875,
+      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1729081828975,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
     "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
       "lastModificationDate": 1729081829258,
       "contentHash": "48686fc32a22a3754b8e63321857dd2a",
@@ -232,42 +306,6 @@
       ],
       "artifacts": [
         "Strings"
-      ]
-    },
-    "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
-      "lastModificationDate": 1729081828875,
-      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
-      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Address"
       ]
     },
     "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
@@ -382,10 +420,10 @@
         "IERC721Metadata"
       ]
     },
-    "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
-      "lastModificationDate": 1729081828975,
-      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+    "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1729081829141,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
         "version": "0.8.27",
         "settings": {
@@ -410,14 +448,12 @@
           }
         }
       },
-      "imports": [
-        "./IERC165.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "ERC165"
+        "IERC165"
       ]
     },
     "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
@@ -492,45 +528,9 @@
         "Math"
       ]
     },
-    "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
-      "lastModificationDate": 1729081829141,
-      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC165"
-      ]
-    },
     "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\contracts\\Users.sol": {
-      "lastModificationDate": 1730987231696,
-      "contentHash": "3093750cf0bb076fa7f71bb3aa529742",
+      "lastModificationDate": 1731073953370,
+      "contentHash": "7924fe21b592988a9c0204825a89d3dc",
       "sourceName": "contracts/Users.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -604,6 +604,42 @@
       ],
       "artifacts": [
         "Sales"
+      ]
+    },
+    "C:\\Users\\Jafet\\Documents\\Tareas\\9no Semestre\\Descentralizadas\\Solidity\\U. II\\NFT\\contracts\\Wallet.sol": {
+      "lastModificationDate": 1731332215375,
+      "contentHash": "eac8b927c10fe6830b4e0d99a9f3f570",
+      "sourceName": "contracts/Wallet.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "WalletMultiSig"
       ]
     }
   }

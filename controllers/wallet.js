@@ -58,7 +58,8 @@ async function submitApprovad(idTransaction, account) {
 }
 async function getTransactions(){
   const provider = new ethers.providers.JsonRpcProvider(API_URL)
-  const walletContract = new ethers.Wallet(WALLET_ADDRESS,contract.abi,provider);
+  console.log(`Wallet: ${WALLET_ADDRESS}`)
+  const walletContract = new ethers.Contract(WALLET_ADDRESS,contract.abi,provider);
   const result = await walletContract.getTransactions();
   var transactions = []
   result.forEach(element=> {
@@ -133,11 +134,11 @@ async function TestProcess(
   }
   
   // Testando
-TestProcess("0.1", "4d1e92daf3ad3cda74cf007b60134e34ccd053c162de82ddf36ffd58aa62f2cd", "0.01", false, false, false, 0);
+TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", "0.01", false, false, false, 0);
 //SUBMIT
-// TestProcess("0.1", "4d1e92daf3ad3cda74cf007b60134e34ccd053c162de82ddf36ffd58aa62f2cd", undefined, true, false, false, 0);
+// TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", undefined, true, false, false, 0);
 // //APROVE
-// TestProcess("0.1", "4d1e92daf3ad3cda74cf007b60134e34ccd053c162de82ddf36ffd58aa62f2cd", undefined, false, true, false, 0);
-// TestProcess("0.1", "4d1e92daf3ad3cda74cf007b60134e34ccd053c162de82ddf36ffd58aa62f2cd", undefined, false, true, false, 1);
+// TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", undefined, false, true, false, 0);
+// TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", undefined, false, true, false, 1);
 // //EXECUTE
-// TestProcess("0.1", "4d1e92daf3ad3cda74cf007b60134e34ccd053c162de82ddf36ffd58aa62f2cd", undefined, false, false, true, 0);
+// TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", undefined, false, false, true, 0);

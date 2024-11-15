@@ -29,6 +29,8 @@ async function createTransaction(provider, method, params) {
 }
 
 async function createUser(firstName, lastName) {
+    console.log(`API URL: ${API_URL}, PRIVATE: ${PRIVATE_KEY}`)
+    console.log([firstName, lastName])
     const provider = new ethers.providers.JsonRpcProvider(API_URL)
     const wallet = new ethers.Wallet(PRIVATE_KEY, provider)
     const transaction = await createTransaction(provider, "insertUser", [firstName, lastName]);
@@ -39,7 +41,9 @@ async function createUser(firstName, lastName) {
     const transactionReciept = await provider.sendTransaction(signedTx)
     await transactionReciept.wait()
     const hash = transactionReciept.hash
-    const receipt = await provider.getTransactionReciept(hash);
+    //const receipt = await provider.getTransactionReciept(hash);
+    console.log("HASH: " + hash)
+    const receipt = await provider.getTransactionReceipt(hash);     //Correccion del metodo
     return receipt;
 }
 
@@ -69,7 +73,8 @@ async function updateAmount(userId, amount) {
     const transactionReciept = await provider.sendTransaction(signedTx)
     await transactionReciept.wait()
     const hash = transactionReciept.hash
-    const receipt = await provider.getTransactionReciept(hash);
+    //const receipt = await provider.getTransactionReciept(hash);
+    const receipt = await provider.getTransactionReceipt(hash);     //Correccion del metodo
     return receipt;
 }
 

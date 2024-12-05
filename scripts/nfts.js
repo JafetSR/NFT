@@ -122,11 +122,6 @@ async function createNFT(info){
     return nftResult
 }
 
-miInfo = {
-    imageRoute: '../images/logo.png',
-    description: 'Esto es una prueba de un NFT'
-}
-
 async function getTokens() {
     const options = {method: "GET", headers: {accept: "application/json"}}
 
@@ -145,12 +140,65 @@ async function getTokens() {
         console.log(jsonResponse.data)
 }
 
-async function testeo() {
-    console.log(await getTokens());
+async function getOwnedNfts() {
+    try {
+        const provider = new ethers.providers.JsonRpcProvider(API_URL)
+        const nftsContract = new ethers.Contract(
+            CONTRACT_ADDRESS,
+            contract.abi,
+            provider
+        )
+        const nfts = await nftsContract.getOwnedNfts(PUBLIC_KEY);
+
+        nfts.forEach(nft => {
+            console.log(`NFT ID: ${nft[0]}, URI: ${nft[1]}`);
+        })
+    }
+    catch(error) {
+        console.log(error);
+    }
 }
+
+// function getContract() {
+//     provider = new ethers.providers.JsonRpcProvider(API_URL);
+//     const nftsContract = new ethers.Contract(
+//         CONTRACT_ADDRESS,
+//         contract.abi,
+//         provider
+//     )
+//     return nftsContract;
+// }
+
+// function formatSale(info) {
+//     let sale = {
+//         saleId: ethers.BigNumber.from(info[0]).toNumber(),      //Sales.sol - Sale ID
+//         userId: ethers.BigNumber.from(info[1]).toNumber()       //Sales.sol - User ID
+//     }
+//     let items = []
+//     info[2].forEach((element, index) => {
+//         let item = {
+//             name:element,
+//             price: ethers.BigNumber.from(info[3][index]).toNumber()
+//         }
+//     })
+//     sale.items = items;
+//     return sale;
+// }
+
+// async function testeo() {
+//     console.log(await getTokens());
+// }
+
+// miInfo = {
+//     imageRoute: '../images/logo.png',
+//     description: 'Esto es una prueba de un NFT'
+// }
+
 //createNFT(miInfo)
+
 //createImgInfo('../images/logo.png')
-testeo()
+//testeo()
 module.exports = {
-    createNFT:createNFT
+    createNFT:createNFT,
+    getOwnedNfts:getOwnedNfts
 }

@@ -134,7 +134,7 @@ async function TestProcess(
   }
   
   // Testando
-TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", "0.01", false, false, false, 0);
+TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", "0.05", false, false, false, 0);
 //SUBMIT
 // TestProcess("0.1", "0xb1470A2f7d60ec5DE45fCD2a4A6E9D7a2b0b941e", undefined, true, false, false, 0);
 // //APROVE
